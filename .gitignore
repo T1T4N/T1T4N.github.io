@@ -31,3 +31,8 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
