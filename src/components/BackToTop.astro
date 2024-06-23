@@ -1,0 +1,28 @@
+---
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
+---
+
+<button
+  id="back-to-top"
+  class="focus-outline py-1 whitespace-nowrap hover:opacity-75"
+>
+  <IconChevronLeft class="inline-block rotate-90" />
+  <span>Back to Top</span>
+</button>
+
+<script is:inline data-astro-rerun>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    document.querySelector("#back-to-top")?.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+  }
+  backToTop();
+
+  /* Go to page start after page swap */
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+</script>
