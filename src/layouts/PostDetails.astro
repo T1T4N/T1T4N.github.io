@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import Giscus from "@components/Giscus.astro";
 import BackToTop from "@components/BackToTop.astro";
 
 export interface Props {
@@ -76,6 +77,10 @@ const layoutProps = {
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
+
+      <div class="mt-24">
+        <Giscus />
+      </div>
     </article>
 
     <ul class="my-8">

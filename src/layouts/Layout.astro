@@ -108,6 +108,27 @@ const socialImageURL = new URL(
     <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline>
+      function init() {
+        setGiscusTheme();
+      }
+
+      const setGiscusTheme = () => {
+        const giscus = document.querySelector(".giscus-frame");
+        const isDark =
+          document.firstElementChild.getAttribute("data-theme") === "dark";
+
+        if (giscus) {
+          const url = new URL(giscus.src);
+          url.searchParams.set("theme", isDark ? "dark" : "light");
+          giscus.src = url.toString();
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => init());
+      document.addEventListener("astro:after-swap", () => init());
+      document.addEventListener("didChangeTheme", () => init());
+    </script>
   </head>
   <body>
     <slot />
