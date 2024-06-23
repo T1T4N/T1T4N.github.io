@@ -12,6 +12,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import BackToTop from "@/components/BackToTop.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -121,13 +122,7 @@ const nextPost =
     >
       <ShareLinks />
 
-      <button
-        id="back-to-top"
-        class="focus-outline py-1 whitespace-nowrap hover:opacity-75"
-      >
-        <IconChevronLeft class="inline-block rotate-90" />
-        <span>Back to Top</span>
-      </button>
+      <BackToTop />
     </div>
 
     <hr class="my-6 border-dashed" />
@@ -272,19 +267,4 @@ const nextPost =
     }
   }
   attachCopyButtons();
-
-  /** Scrolls the document to the top when
-   * the "Back to Top" button is clicked. */
-  function backToTop() {
-    document.querySelector("#back-to-top")?.addEventListener("click", () => {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    });
-  }
-  backToTop();
-
-  /* Go to page start after page swap */
-  document.addEventListener("astro:after-swap", () =>
-    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
-  );
 </script>
