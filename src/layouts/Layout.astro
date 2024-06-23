@@ -115,6 +115,28 @@ const rssHref = getRelativeLocaleUrl(
     </script>
 
     <ClientRouter />
+
+    <script is:inline>
+      function init() {
+        setGiscusTheme();
+      }
+
+      const setGiscusTheme = () => {
+        const giscus = document.querySelector(".giscus-frame");
+        const isDark =
+          document.firstElementChild.getAttribute("data-theme") === "dark";
+
+        if (giscus) {
+          const url = new URL(giscus.src);
+          url.searchParams.set("theme", isDark ? "dark" : "light");
+          giscus.src = url.toString();
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => init());
+      document.addEventListener("astro:after-swap", () => init());
+      document.addEventListener("didChangeTheme", () => init());
+    </script>
   </head>
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
