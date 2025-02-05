@@ -1,9 +1,9 @@
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  profile: "https://satnaing.dev/",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  website: "https://armenski.de",
+  author: "Robert Armenski",
+  profile: "https://armenski.de/",
+  desc: "My personal blog regarding development topics focusing on Apple technologies.",
+  title: "Robert Armenski | SwiftyWork",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -12,7 +12,8 @@ export const SITE = {
   showArchives: true,
   showBackButton: true, // show back button in post detail
   editPost: {
-    url: "https://github.com/satnaing/astro-paper/edit/main/src/content/blog",
+    disabled: true,
+    url: "",
     text: "Suggest Changes",
     appendFilePath: true,
   },
