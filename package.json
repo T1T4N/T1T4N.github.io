@@ -1,13 +1,16 @@
 {
-  "name": "astro-paper-v6",
+  "name": "swifty-work",
   "type": "module",
   "version": "7.0.0",
   "engines": {
     "node": ">=22.23.4"
   },
   "scripts": {
+    "init": "astro telemetry disable",
     "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "dev-host": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind static/",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
