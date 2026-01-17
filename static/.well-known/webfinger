@@ -3,7 +3,7 @@
   "links": [
     {
       "rel": "http://openid.net/specs/connect/1.0/issuer",
-      "href": "https://lemur-17.cloud-iam.com/auth/realms/elysium"
+      "href": "https://lemur-14.cloud-iam.com/auth/realms/elysium"
     }
   ]
 }
