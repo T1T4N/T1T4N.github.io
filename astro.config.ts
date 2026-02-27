@@ -37,4 +37,7 @@ export default defineConfig({
     svg: true,
     responsiveImages: true,
   },
+  redirects: {
+    '/github': 'https://github.com/T1T4N'
+  }
 });

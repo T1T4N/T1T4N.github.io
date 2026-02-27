@@ -3,7 +3,7 @@ export const SITE = {
   author: "Robert Armenski",
   profile: "https://armenski.de/",
   desc: "My personal blog regarding development topics focusing on Apple technologies.",
-  title: "Robert Armenski | SwiftyWork",
+  title: "Robert Armenski",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
