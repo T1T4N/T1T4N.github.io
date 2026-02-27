@@ -3,7 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://armenski.de",
-    title: "Robert Armenski | SwiftyWork",
+    title: "Robert Armenski",
     description: "My personal blog regarding development topics focusing on Apple technologies.",
     author: "Robert Armenski",
     profile: "https://armenski.de/",
