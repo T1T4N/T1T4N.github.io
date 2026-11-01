@@ -83,6 +83,6 @@ export default defineConfig({
     svgOptimizer: svgoOptimizer(),
   },
   redirects: {
-    '/github': 'https://github.com/T1T4N'
-  }
+    "/github": "https://github.com/T1T4N",
+  },
 });
